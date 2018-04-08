@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
+import {AngularFireModule} from 'angularfire2';
+import {AngularFirestoreModule} from 'angularfire2/firestore';
 
 import {AppComponent} from './app.component';
 import {WelcomeComponent} from './views/welcome/welcome.component';
@@ -15,7 +16,6 @@ import {PageNotFoundComponent} from './views/page-not-found/page-not-found.compo
 import {RouterModule} from '@angular/router';
 import {routes} from './app.routes';
 import {environment} from '../environments/environment';
-
 
 @NgModule({
   declarations: [
@@ -32,7 +32,9 @@ import {environment} from '../environments/environment';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes, {enableTracing: environment.app.routing.enableTracing})
+    RouterModule.forRoot(routes, {enableTracing: environment.app.routing.enableTracing}),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule.enablePersistence()
   ],
   providers: [],
   bootstrap: [AppComponent]

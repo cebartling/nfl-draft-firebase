@@ -8,9 +8,13 @@
 /functions/lib
 
 # dependencies
-/node_modules
-/data-import/node_modules
-/functions/node_modules
+node_modules/
+data-import/node_modules/
+functions/node_modules/
+
+# Environment variable files
+src/environments/.environment.local.ts
+
 
 # IDEs and editors
 /.idea

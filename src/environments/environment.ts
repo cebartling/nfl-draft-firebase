@@ -7,7 +7,15 @@ export const environment = {
   production: false,
   app: {
     routing: {
-      enableTracing: true
+      enableTracing: false
     }
+  },
+  firebase: {
+    apiKey: '',
+    authDomain: '',
+    databaseURL: '',
+    projectId: '',
+    storageBucket: '',
+    messagingSenderId: ''
   }
 };

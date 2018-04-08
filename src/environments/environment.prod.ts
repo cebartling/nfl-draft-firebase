@@ -4,5 +4,13 @@ export const environment = {
     routing: {
       enableTracing: false
     }
+  },
+  firebase: {
+    apiKey: '',
+    authDomain: '',
+    databaseURL: '',
+    projectId: '',
+    storageBucket: '',
+    messagingSenderId: ''
   }
 };
