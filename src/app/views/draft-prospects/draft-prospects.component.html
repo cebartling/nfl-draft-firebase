@@ -3,11 +3,13 @@
 </div>
 
 <div class="">
-  <table class="table table-bordered">
-    <thead>
+  <table class="table table-bordered table-striped table-hover table-light">
+    <thead class="thead-dark">
       <tr>
         <th class="text-left">Name</th>
         <th class="text-left">Position</th>
+        <th class="text-center">Height</th>
+        <th class="text-center">Weight</th>
         <th class="text-left">College</th>
       </tr>
     </thead>
@@ -15,6 +17,8 @@
       <tr *ngFor="let prospect of prospects$ | async">
         <td class="text-left">{{ prospect.LastName }}, {{ prospect.FirstName }}</td>
         <td class="text-left">{{ prospect.Position }}</td>
+        <td class="text-center">{{ prospect.HeightInMeters | heightConversion }}</td>
+        <td class="text-center">{{ prospect.WeightInKilograms | weightConversion }}</td>
         <td class="text-left">{{ prospect.College }}</td>
       </tr>
     </tbody>

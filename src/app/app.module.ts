@@ -16,6 +16,8 @@ import {PageNotFoundComponent} from './views/page-not-found/page-not-found.compo
 import {RouterModule} from '@angular/router';
 import {routes} from './app.routes';
 import {environment} from '../environments/environment';
+import { WeightConversionPipe } from './pipes/weight-conversion.pipe';
+import { HeightConversionPipe } from './pipes/height-conversion.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import {environment} from '../environments/environment';
     HeaderComponent,
     FooterComponent,
     NavigationComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    WeightConversionPipe,
+    HeightConversionPipe
   ],
   imports: [
     BrowserModule,
