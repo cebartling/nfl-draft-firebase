@@ -24,6 +24,7 @@ src/environments/.environment.local.ts
 *.launch
 .settings/
 *.sublime-workspace
+service-account.json
 
 # IDE - VSCode
 .vscode/*
