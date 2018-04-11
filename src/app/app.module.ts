@@ -18,6 +18,7 @@ import {routes} from './app.routes';
 import {environment} from '../environments/environment';
 import { WeightConversionPipe } from './pipes/weight-conversion.pipe';
 import { HeightConversionPipe } from './pipes/height-conversion.pipe';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { HeightConversionPipe } from './pipes/height-conversion.pipe';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(routes, {enableTracing: environment.app.routing.enableTracing}),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence()
